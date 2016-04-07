@@ -1,0 +1,5 @@
+2*A + 3*B;
+subject to
+2*A + 2*B <= 10;
+3*A + 6*B <= 27;
+bounds

@@ -199,6 +199,7 @@ baseVariaveis[0] = "z";
 double resultados[variaveisPrincipais + 1];
 resultados[0] = 0;
 
+cout << "Variaveis principais: "<<variaveisPrincipais<<endl;
 //inicializando meu baseVariaveis
 for (int i = 1; i < variaveisPrincipais + 1; ++i)
 {
@@ -213,14 +214,20 @@ for (int i = 1; i < variaveisPrincipais + 1; ++i)
 while(!verificarSolucaoOtima(_tableus)) {
 
     // achando o maior coeficiente da linha z
-    double maior = abs(_tableus[0][1]);
+    double maior = 0.0000001;
     int posicao = 1;
-    for (int j = 2; j <= variaveisPrincipais; ++j)
+    // for (int j = 1; j <= variaveisPrincipais; ++j)
+    for (int j = 1; j <= coluna-1; ++j)
+   
     {
-    	// cout << maior << endl;
-    	if(maior < abs(_tableus[0][j])){
-    		posicao = j;
-    		maior = abs(_tableus[0][j]);	
+    	 
+    	 if(_tableus[0][j] < 0) {
+    	 		
+    		if(maior < abs(_tableus[0][j])){
+    			posicao = j;
+    			maior = abs(_tableus[0][j]);
+    			cout <<"Maior positivo: " <<maior << endl;
+    		}
     	}
     	/* code */
     }
@@ -232,10 +239,16 @@ while(!verificarSolucaoOtima(_tableus)) {
     
     for (int i = 1; i < linha; ++i)
     {
-    	if(!_tableus[i][posicao] == 0){
-   
+    	// tentei pegar aqui os numeros que sao negativos de algum dos lados, pois multiplicar um negativo com um positivo vai ficar negativo e nao compensa para eu selecionar ele
+    	// if(!(_tableus[i][posicao] == 0) || !(_tableus[i][coluna-1] <0 && !_tableus[i][posicao-1] > 0) || !(_tableus[i][coluna-1] >0 && !_tableus[i][posicao-1] < 0)){ 
+    	// if(!(_tableus[i][coluna-1] == 0)){
+    	if(!(_tableus[i][posicao] == 0) && !(_tableus[i][coluna-1] <0 || _tableus[i][posicao-1] < 0)){ 
+    	
+   			if((!_tableus[i][coluna-1] == 0) ){	
     		maiorRazoes[i] = _tableus[i][coluna-1] / _tableus[i][posicao];
-    		
+    		}else{
+    			maiorRazoes[i] = 0;
+    		}
     		
     }else{
     	maiorRazoes[i] = -1;
@@ -245,19 +258,27 @@ while(!verificarSolucaoOtima(_tableus)) {
     }
 
 
+    for (int i = 1; i < linha; ++i)
+    {
+    	cout << "i: "<< i << " MaiorRazoes:  "<< maiorRazoes[i]<<endl;
+    }
+
+
+
 
 
     int posicaoDois;
     double tempMenor = 10000000;
     
-    for (int i = 0; i < linha; ++i)
+    for (int i = 1; i < linha; ++i)
     {
 
     	if(maiorRazoes[i] >= 0){
     	
-    	if(  tempMenor > maiorRazoes[i]){
+    	if(  tempMenor > maiorRazoes[i]  ){
     		
     		tempMenor = maiorRazoes[i];
+    		cout << "TempMenor: "<< tempMenor << endl;
     		posicaoDois = i;
     	}
     	}
@@ -275,7 +296,7 @@ while(!verificarSolucaoOtima(_tableus)) {
 
 
 
-
+//dividindo a linha pivo
 	double divisor = _tableus[posicaoDois][posicao];
 	double linhaPivo[coluna];
 	     for (int z = 0; z < coluna; ++z)
@@ -324,26 +345,45 @@ cout << "Aqui depois de fazer a parte Linha do pivo atual / elemento pivo \n";
   cout << "\n";
 
 cout << "Aqui depois de fazer a parte Linha atual - Coef coluna pivo * nova linha pivo \n";
-// baseVariaveis[posicaoDois] = maxzVariaveis[posicao];
 
-// resultados[posicao] = _tableus[posicaoDois][coluna - 1];
+cout << posicaoDois<<endl;
+// cout << maxzVariaveis[posicao]<<endl;
+//  cout << baseVariaveis[posicaoDois] <<endl;
+// cout << maxzVariaveis[posicao]<<endl;
+  // baseVariaveis[posicaoDois-1] = maxzVariaveis[posicao];
+
+//olhar depois codigo no github
+cout << maxzVariaveis[posicao-1]<<endl;
+ // resultados[posicao] = _tableus[posicaoDois][coluna - 1];
 
 
 
-
+	// cout << _tableus[3][1] << "\t";
 
   	  for (int n=0; n<linha; n++){
     for (int m=0; m<coluna; m++)
     {
 
       cout << _tableus[n][m] << "\t";
+      // cout << "n: "<< n << " m: "<< m<<endl;
     }
     cout << endl;
     }
+  
+// // cout << baseVariaveis[0]<<endl;
+// // cout << baseVariaveis[1]<<endl;
+// // cout << baseVariaveis[2]<<endl;
+
+// // cout << maxzVariaveis[0]<<endl;
+// // cout << maxzVariaveis[1]<<endl;
+// // cout << maxzVariaveis[2]<<endl;
 
 
 
-baseVariaveis[posicaoDois] = maxzVariaveis[posicao];
+// cout << posicao<<endl;
+
+// cout << "aaa";
+baseVariaveis[posicaoDois-1] = maxzVariaveis[posicao];
 resultados[posicao] = _tableus[posicaoDois][coluna - 1];
 
 for (int i = 1; i <= variaveisPrincipais; ++i)
@@ -615,11 +655,11 @@ cont++;
 		}
 
 	}
-	// for (int i = 0; i < cont; ++i)
-	// {
-	// 	cout << "maxzVariaveis: "<< maxzVariaveis[i]<< " maxzValores: "<< maxzValores[i]<< endl;
-	// 	cout <<  endl;
-	// }
+	for (int i = 0; i < cont; ++i)
+	{
+		cout << "maxzVariaveis: "<< maxzVariaveis[i]<< " maxzValores: "<< maxzValores[i]<< endl;
+		cout <<  endl;
+	}
 	if(construirTabela()){
 		// cout << "deu certo";
 	}

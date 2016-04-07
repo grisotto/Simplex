@@ -1,0 +1,158 @@
+1*x1 + 1.2*x2 + 1.5*x3;
+4*x1 + 1*x2 + 0.8*x3 <= 100;
+0.9 * x1 + 1*x2 + 5 * x3 <= 9.50;
+1.2 * x1 + 3 * x2 + 1.5 * x3 <= 110;
+1*x3 <= 1;
+-1.0*x1 <= -2;
+-1.0*x2 <= -2;
+maxzVariaveis: z maxzValores: 1
+
+maxzVariaveis: x1 maxzValores: 1
+
+maxzVariaveis: x2 maxzValores: 1.2
+
+maxzVariaveis: x3 maxzValores: 1.5
+
+maxzVariaveis: sol maxzValores: 0
+
+maxzVariaveis: x1 maxzValores: 4
+
+maxzVariaveis: x2 maxzValores: 1
+
+maxzVariaveis: x3 maxzValores: 0.8
+
+maxzVariaveis: sol maxzValores: 100
+
+maxzVariaveis: x1 maxzValores: 0.9
+
+maxzVariaveis: x2 maxzValores: 1
+
+maxzVariaveis: x3 maxzValores: 5
+
+maxzVariaveis: sol maxzValores: 9.5
+
+maxzVariaveis: x1 maxzValores: 1.2
+
+maxzVariaveis: x2 maxzValores: 3
+
+maxzVariaveis: x3 maxzValores: 1.5
+
+maxzVariaveis: sol maxzValores: 110
+
+maxzVariaveis: x3 maxzValores: 1
+
+maxzVariaveis: sol maxzValores: 1
+
+maxzVariaveis: x1 maxzValores: -1
+
+maxzVariaveis: sol maxzValores: -2
+
+maxzVariaveis: x2 maxzValores: -1
+
+maxzVariaveis: sol maxzValores: -2
+
+z	x1	x2	x3	
+1	-1	-1.2	-1.5	0	0	0	0	0	0	0	
+0	4	1	0.8	1	0	0	0	0	0	100	
+0	0.9	1	5	0	1	0	0	0	0	9.5	
+0	1.2	3	1.5	0	0	1	0	0	0	110	
+0	0	0	1	0	0	0	1	0	0	1	
+0	-1	0	0	0	0	0	0	1	0	-2	
+0	0	-1	0	0	0	0	0	0	1	-2	
+Variaveis principais: 3
+Maior positivo: 1
+Maior positivo: 1.2
+Maior positivo: 1.5
+i: 1 MaiorRazoes:  125
+i: 2 MaiorRazoes:  1.9
+i: 3 MaiorRazoes:  73.3333
+i: 4 MaiorRazoes:  1
+i: 5 MaiorRazoes:  -1
+i: 6 MaiorRazoes:  -1
+TempMenor: 125
+TempMenor: 1.9
+TempMenor: 1
+Aqui depois de fazer a parte Linha do pivo atual / elemento pivo 
+1	-1	-1.2	-1.5	0	0	0	0	0	0	0	
+0	4	1	0.8	1	0	0	0	0	0	100	
+0	0.9	1	5	0	1	0	0	0	0	9.5	
+0	1.2	3	1.5	0	0	1	0	0	0	110	
+0	0	0	1	0	0	0	1	0	0	1	
+0	-1	0	0	0	0	0	0	1	0	-2	
+0	0	-1	0	0	0	0	0	0	1	-2	
+
+Aqui depois de fazer a parte Linha atual - Coef coluna pivo * nova linha pivo 
+4
+x2
+1	-1	-1.2	0	0	0	0	1.5	0	0	1.5	
+0	4	1	0	1	0	0	-0.8	0	0	99.2	
+0	0.9	1	0	0	1	0	-5	0	0	4.5	
+0	1.2	3	0	0	0	1	-1.5	0	0	108.5	
+0	0	0	1	0	0	0	1	0	0	1	
+0	-1	0	0	0	0	0	0	1	0	-2	
+0	0	-1	0	0	0	0	0	0	1	-2	
+Maior positivo: 1
+Maior positivo: 1.2
+i: 1 MaiorRazoes:  99.2
+i: 2 MaiorRazoes:  4.5
+i: 3 MaiorRazoes:  36.1667
+i: 4 MaiorRazoes:  -1
+i: 5 MaiorRazoes:  -1
+i: 6 MaiorRazoes:  -1
+TempMenor: 99.2
+TempMenor: 4.5
+Aqui depois de fazer a parte Linha do pivo atual / elemento pivo 
+1	-1	-1.2	0	0	0	0	1.5	0	0	1.5	
+0	4	1	0	1	0	0	-0.8	0	0	99.2	
+0	0.9	1	0	0	1	0	-5	0	0	4.5	
+0	1.2	3	0	0	0	1	-1.5	0	0	108.5	
+0	0	0	1	0	0	0	1	0	0	1	
+0	-1	0	0	0	0	0	0	1	0	-2	
+0	0	-1	0	0	0	0	0	0	1	-2	
+
+Aqui depois de fazer a parte Linha atual - Coef coluna pivo * nova linha pivo 
+2
+x1
+1	0.08	0	0	0	1.2	0	-4.5	0	0	6.9	
+0	3.1	0	0	1	-1	0	4.2	0	0	94.7	
+0	0.9	1	0	0	1	0	-5	0	0	4.5	
+0	-1.5	0	0	0	-3	1	13.5	0	0	95	
+0	0	0	1	0	0	0	1	0	0	1	
+0	-1	0	0	0	0	0	0	1	0	-2	
+0	0.9	0	0	0	1	0	-5	0	1	2.5	
+Maior positivo: 4.5
+i: 1 MaiorRazoes:  22.5476
+i: 2 MaiorRazoes:  -0.9
+i: 3 MaiorRazoes:  7.03704
+i: 4 MaiorRazoes:  1
+i: 5 MaiorRazoes:  -1
+i: 6 MaiorRazoes:  -0.5
+TempMenor: 22.5476
+TempMenor: 7.03704
+TempMenor: 1
+Aqui depois de fazer a parte Linha do pivo atual / elemento pivo 
+1	0.08	0	0	0	1.2	0	-4.5	0	0	6.9	
+0	3.1	0	0	1	-1	0	4.2	0	0	94.7	
+0	0.9	1	0	0	1	0	-5	0	0	4.5	
+0	-1.5	0	0	0	-3	1	13.5	0	0	95	
+0	0	0	1	0	0	0	1	0	0	1	
+0	-1	0	0	0	0	0	0	1	0	-2	
+0	0.9	0	0	0	1	0	-5	0	1	2.5	
+
+Aqui depois de fazer a parte Linha atual - Coef coluna pivo * nova linha pivo 
+4
+x2
+1	0.08	0	4.5	0	1.2	0	0	0	0	11.4	
+0	3.1	0	-4.2	1	-1	0	0	0	0	90.5	
+0	0.9	1	5	0	1	0	0	0	0	9.5	
+0	-1.5	0	-13.5	0	-3	1	0	0	0	81.5	
+0	0	0	1	0	0	0	1	0	0	1	
+0	-1	0	0	0	0	0	0	1	0	-2	
+0	0.9	0	5	0	1	0	0	0	1	7.5	
+
+RESULTADO
+z 11.4
+x1 0
+x2 90.5
+x3 81.5
+ate mais

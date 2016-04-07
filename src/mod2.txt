@@ -1,0 +1,63 @@
+2*A + 3*B;
+2*A + 2*B <= 10;
+3*A + 6*B <= 27;
+maxzVariaveis: z maxzValores: 1
+
+maxzVariaveis: A maxzValores: 2
+
+maxzVariaveis: B maxzValores: 3
+
+maxzVariaveis: sol maxzValores: 0
+
+maxzVariaveis: A maxzValores: 2
+
+maxzVariaveis: B maxzValores: 2
+
+maxzVariaveis: sol maxzValores: 10
+
+maxzVariaveis: A maxzValores: 3
+
+maxzVariaveis: B maxzValores: 6
+
+maxzVariaveis: sol maxzValores: 27
+
+z	A	B	
+1	-2	-3	0	0	0	
+0	2	2	1	0	10	
+0	3	6	0	1	27	
+Variaveis principais: 2
+i: 1 MaiorRazoes:  5
+i: 2 MaiorRazoes:  4.5
+TempMenor: 5
+TempMenor: 4.5
+Aqui depois de fazer a parte Linha do pivo atual / elemento pivo 
+1	-2	-3	0	0	0	
+0	2	2	1	0	10	
+0	0.5	1	0	0.166667	4.5	
+
+Aqui depois de fazer a parte Linha atual - Coef coluna pivo * nova linha pivo 
+2
+A
+1	-0.5	0	0	0.5	13.5	
+0	1	0	1	-0.333333	1	
+0	0.5	1	0	0.166667	4.5	
+i: 1 MaiorRazoes:  1
+i: 2 MaiorRazoes:  9
+TempMenor: 1
+Aqui depois de fazer a parte Linha do pivo atual / elemento pivo 
+1	-0.5	0	0	0.5	13.5	
+0	1	0	1	-0.333333	1	
+0	0.5	1	0	0.166667	4.5	
+
+Aqui depois de fazer a parte Linha atual - Coef coluna pivo * nova linha pivo 
+1
+z
+1	0	0	0.5	0.333333	14	
+0	1	0	1	-0.333333	1	
+0	0	1	-0.5	0.333333	4	
+
+RESULTADO
+z 14
+A 1
+B 4
+ate mais

@@ -1,0 +1,194 @@
+59*a1 + 85*a2 + 80*a3 + 1.0*aa;
+1.0*a1 + 1.0*a2 + 1.0*a3 + 1.0*aa <= 10000;
+0.45*a1 + 0.6*a2 + 0.5*a3 <= 5400;
+5*a2 <= 25000;
+8*a3 <= 30000;
+17*a1 + 19*a2 + 25*a3 <= 180000;
+maxzVariaveis: z maxzValores: 1
+
+maxzVariaveis: a1 maxzValores: 59
+
+maxzVariaveis: a2 maxzValores: 85
+
+maxzVariaveis: a3 maxzValores: 80
+
+maxzVariaveis: aa maxzValores: 1
+
+maxzVariaveis: sol maxzValores: 0
+
+maxzVariaveis: a1 maxzValores: 1
+
+maxzVariaveis: a2 maxzValores: 1
+
+maxzVariaveis: a3 maxzValores: 1
+
+maxzVariaveis: aa maxzValores: 1
+
+maxzVariaveis: sol maxzValores: 10000
+
+maxzVariaveis: a1 maxzValores: 0.45
+
+maxzVariaveis: a2 maxzValores: 0.6
+
+maxzVariaveis: a3 maxzValores: 0.5
+
+maxzVariaveis: sol maxzValores: 5400
+
+maxzVariaveis: a2 maxzValores: 5
+
+maxzVariaveis: sol maxzValores: 25000
+
+maxzVariaveis: a3 maxzValores: 8
+
+maxzVariaveis: sol maxzValores: 30000
+
+maxzVariaveis: a1 maxzValores: 17
+
+maxzVariaveis: a2 maxzValores: 19
+
+maxzVariaveis: a3 maxzValores: 25
+
+maxzVariaveis: sol maxzValores: 180000
+
+z	a1	a2	a3	aa	
+1	-59	-85	-80	-1	0	0	0	0	0	0	
+0	1	1	1	1	1	0	0	0	0	10000	
+0	0.45	0.6	0.5	0	0	1	0	0	0	5400	
+0	0	5	0	0	0	0	1	0	0	25000	
+0	0	0	8	0	0	0	0	1	0	30000	
+0	17	19	25	0	0	0	0	0	1	180000	
+Variaveis principais: 4
+Maior positivo: 59
+Maior positivo: 85
+i: 1 MaiorRazoes:  10000
+i: 2 MaiorRazoes:  9000
+i: 3 MaiorRazoes:  5000
+i: 4 MaiorRazoes:  -1
+i: 5 MaiorRazoes:  9473.68
+TempMenor: 10000
+TempMenor: 9000
+TempMenor: 5000
+Aqui depois de fazer a parte Linha do pivo atual / elemento pivo 
+1	-59	-85	-80	-1	0	0	0	0	0	0	
+0	1	1	1	1	1	0	0	0	0	10000	
+0	0.45	0.6	0.5	0	0	1	0	0	0	5400	
+0	0	1	0	0	0	0	0.2	0	0	5000	
+0	0	0	8	0	0	0	0	1	0	30000	
+0	17	19	25	0	0	0	0	0	1	180000	
+
+Aqui depois de fazer a parte Linha atual - Coef coluna pivo * nova linha pivo 
+3
+a1
+1	-59	0	-80	-1	0	0	17	0	0	425000	
+0	1	0	1	1	1	0	-0.2	0	0	5000	
+0	0.45	0	0.5	0	0	1	-0.12	0	0	2400	
+0	0	1	0	0	0	0	0.2	0	0	5000	
+0	0	0	8	0	0	0	0	1	0	30000	
+0	17	0	25	0	0	0	-3.8	0	1	85000	
+Maior positivo: 59
+Maior positivo: 80
+i: 1 MaiorRazoes:  5000
+i: 2 MaiorRazoes:  4800
+i: 3 MaiorRazoes:  -1
+i: 4 MaiorRazoes:  3750
+i: 5 MaiorRazoes:  3400
+TempMenor: 5000
+TempMenor: 4800
+TempMenor: 3750
+TempMenor: 3400
+Aqui depois de fazer a parte Linha do pivo atual / elemento pivo 
+1	-59	0	-80	-1	0	0	17	0	0	425000	
+0	1	0	1	1	1	0	-0.2	0	0	5000	
+0	0.45	0	0.5	0	0	1	-0.12	0	0	2400	
+0	0	1	0	0	0	0	0.2	0	0	5000	
+0	0	0	8	0	0	0	0	1	0	30000	
+0	0.68	0	1	0	0	0	-0.152	0	0.04	3400	
+
+Aqui depois de fazer a parte Linha atual - Coef coluna pivo * nova linha pivo 
+5
+a2
+1	-4.6	0	0	-1	0	0	4.84	0	3.2	697000	
+0	0.32	0	0	1	1	0	-0.048	0	-0.04	1600	
+0	0.11	0	0	0	0	1	-0.044	0	-0.02	700	
+0	0	1	0	0	0	0	0.2	0	0	5000	
+0	-5.44	0	0	0	0	0	1.216	1	-0.32	2800	
+0	0.68	0	1	0	0	0	-0.152	0	0.04	3400	
+Maior positivo: 4.6
+i: 1 MaiorRazoes:  5000
+i: 2 MaiorRazoes:  6363.64
+i: 3 MaiorRazoes:  -1
+i: 4 MaiorRazoes:  -514.706
+i: 5 MaiorRazoes:  5000
+TempMenor: 5000
+TempMenor: 5000
+Aqui depois de fazer a parte Linha do pivo atual / elemento pivo 
+1	-4.6	0	0	-1	0	0	4.84	0	3.2	697000	
+0	0.32	0	0	1	1	0	-0.048	0	-0.04	1600	
+0	0.11	0	0	0	0	1	-0.044	0	-0.02	700	
+0	0	1	0	0	0	0	0.2	0	0	5000	
+0	-5.44	0	0	0	0	0	1.216	1	-0.32	2800	
+0	1	0	1.47059	0	0	0	-0.223529	0	0.0588235	5000	
+
+Aqui depois de fazer a parte Linha atual - Coef coluna pivo * nova linha pivo 
+5
+z
+1	0	0	6.76471	-1	0	0	3.81176	0	3.47059	720000	
+0	0	0	-0.470588	1	1	0	0.0235294	0	-0.0588235	2.27374e-13	
+0	0	0	-0.161765	0	0	1	-0.0194118	0	-0.0264706	150	
+0	0	1	0	0	0	0	0.2	0	0	5000	
+0	0	0	8	0	0	0	0	1	0	30000	
+0	1	0	1.47059	0	0	0	-0.223529	0	0.0588235	5000	
+Maior positivo: 1
+i: 1 MaiorRazoes:  -1
+i: 2 MaiorRazoes:  -1
+i: 3 MaiorRazoes:  -1
+i: 4 MaiorRazoes:  -1
+i: 5 MaiorRazoes:  -1
+Aqui depois de fazer a parte Linha do pivo atual / elemento pivo 
+1	0	0	6.76471	-1	0	0	3.81176	0	3.47059	720000	
+0	0	0	-0.470588	1	1	0	0.0235294	0	-0.0588235	2.27374e-13	
+0	0	0	-0.161765	0	0	1	-0.0194118	0	-0.0264706	150	
+0	0	1	0	0	0	0	0.2	0	0	5000	
+0	0	0	8	0	0	0	0	1	0	30000	
+-nan	inf	-nan	inf	-nan	-nan	-nan	-inf	-nan	inf	inf	
+
+Aqui depois de fazer a parte Linha atual - Coef coluna pivo * nova linha pivo 
+5
+a3
+-nan	inf	-nan	inf	-nan	-nan	-nan	-inf	-nan	inf	inf	
+-nan	-inf	-nan	-inf	-nan	-nan	-nan	inf	-nan	-inf	-inf	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+-nan	inf	-nan	inf	-nan	-nan	-nan	-inf	-nan	inf	inf	
+Maior positivo: inf
+i: 1 MaiorRazoes:  -1
+i: 2 MaiorRazoes:  -nan
+i: 3 MaiorRazoes:  -nan
+i: 4 MaiorRazoes:  -nan
+i: 5 MaiorRazoes:  -nan
+Aqui depois de fazer a parte Linha do pivo atual / elemento pivo 
+-nan	inf	-nan	inf	-nan	-nan	-nan	-inf	-nan	inf	inf	
+-nan	-inf	-nan	-inf	-nan	-nan	-nan	inf	-nan	-inf	-inf	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+
+Aqui depois de fazer a parte Linha atual - Coef coluna pivo * nova linha pivo 
+5
+a1
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	-nan	
+
+RESULTADO
+z -nan
+a1 30000
+a2 -nan
+a3 2800
+aa -nan
+ate mais
